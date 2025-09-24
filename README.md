@@ -51,17 +51,17 @@ See individual service README files for detailed setup instructions.
 MIT License - see LICENSE file for details.
 
 
-# WhatsFlowPro 🚀
+# WhatsAppFlowHub 🚀
 
 **The Ultimate AI-Powered WhatsApp Task Management Ecosystem**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/your-org/whatsflowpro)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/your-org/whatsflowpro)
-[![Docker](https://img.shields.io/badge/docker-supported-blue.svg)](https://hub.docker.com/r/whatsflowpro/platform)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/vishalm/WhatsAppFlowHub)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/vishalm/WhatsAppFlowHub)
+[![Docker](https://img.shields.io/badge/docker-supported-blue.svg)](https://hub.docker.com/r/WhatsAppFlowHub/platform)
 [![Kubernetes](https://img.shields.io/badge/kubernetes-ready-green.svg)](https://kubernetes.io/)
 
-> Transform conversational chaos into organized, actionable workflows. WhatsFlowPro serves as a universal bridge between informal WhatsApp communication and professional task management, powered by cutting-edge AI and seamless integrations.
+> Transform conversational chaos into organized, actionable workflows. WhatsAppFlowHub serves as a universal bridge between informal WhatsApp communication and professional task management, powered by cutting-edge AI and seamless integrations.
 
 ## 📋 Table of Contents
 
@@ -90,7 +90,7 @@ MIT License - see LICENSE file for details.
 
 ## 🌟 Overview
 
-WhatsFlowPro is an intelligent AI-powered ecosystem that revolutionizes how individuals and businesses manage tasks extracted from WhatsApp conversations. By combining advanced Natural Language Processing, seamless third-party integrations, and intelligent automation, it transforms informal messaging into structured, actionable workflows.
+WhatsAppFlowHub is an intelligent AI-powered ecosystem that revolutionizes how individuals and businesses manage tasks extracted from WhatsApp conversations. By combining advanced Natural Language Processing, seamless third-party integrations, and intelligent automation, it transforms informal messaging into structured, actionable workflows.
 
 ### 🎯 Problem Statement
 
@@ -102,7 +102,7 @@ WhatsFlowPro is an intelligent AI-powered ecosystem that revolutionizes how indi
 
 ### 💡 Solution
 
-WhatsFlowPro provides:
+WhatsAppFlowHub provides:
 - **Intelligent Message Scanning**: AI-powered extraction of tasks, deadlines, and assignments
 - **Universal Integration Hub**: Connect with 15+ popular productivity platforms
 - **Smart Automation**: Automated task creation, routing, and progress tracking
@@ -273,8 +273,8 @@ graph TB
 ### 🔧 One-Command Setup
 ```bash
 # Clone and setup the entire ecosystem
-git clone https://github.com/your-org/whatsflowpro.git
-cd whatsflowpro
+git clone https://github.com/vishalm/WhatsAppFlowHub.git
+cd WhatsAppFlowHub
 ./scripts/quick-start.sh
 ```
 
@@ -290,8 +290,8 @@ open http://localhost:3000
 ### ⚡ Manual Setup
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-org/whatsflowpro.git
-cd whatsflowpro
+git clone https://github.com/vishalm/WhatsAppFlowHub.git
+cd WhatsAppFlowHub
 
 # 2. Install dependencies
 npm install
@@ -358,15 +358,15 @@ docker-compose -f docker-compose.prod.yml build
 #### PostgreSQL Setup
 ```sql
 -- Create database and user
-CREATE DATABASE whatsflowpro;
-CREATE USER whatsflowpro_user WITH PASSWORD 'secure_password';
-GRANT ALL PRIVILEGES ON DATABASE whatsflowpro TO whatsflowpro_user;
+CREATE DATABASE WhatsAppFlowHub;
+CREATE USER WhatsAppFlowHub_user WITH PASSWORD 'secure_password';
+GRANT ALL PRIVILEGES ON DATABASE WhatsAppFlowHub TO WhatsAppFlowHub_user;
 ```
 
 #### MongoDB Setup
 ```javascript
 // Create MongoDB collections and indexes
-use whatsflowpro;
+use WhatsAppFlowHub;
 db.createCollection("messages");
 db.createCollection("conversations");
 db.messages.createIndex({ "timestamp": 1, "user_id": 1 });
@@ -392,8 +392,8 @@ API_VERSION=v1
 LOG_LEVEL=info
 
 # Database URLs
-DATABASE_URL=postgresql://user:pass@localhost:5432/whatsflowpro
-MONGODB_URL=mongodb://localhost:27017/whatsflowpro
+DATABASE_URL=postgresql://user:pass@localhost:5432/WhatsAppFlowHub
+MONGODB_URL=mongodb://localhost:27017/WhatsAppFlowHub
 REDIS_URL=redis://localhost:6379
 
 # WhatsApp Business API
@@ -902,7 +902,7 @@ class EntityExtractor:
 ```yaml
 # training/config/task_extraction.yaml
 model:
-  name: "whatsflowpro-task-extractor"
+  name: "WhatsAppFlowHub-task-extractor"
   base_model: "distilbert-base-uncased"
   num_labels: 3  # task, non-task, urgent-task
 
@@ -1691,7 +1691,7 @@ class CustomIntegrationBuilder {
 // Service Worker for offline functionality
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('whatsflowpro-v1').then((cache) => {
+    caches.open('WhatsAppFlowHub-v1').then((cache) => {
       return cache.addAll([
         '/',
         '/dashboard',
@@ -1732,7 +1732,7 @@ self.addEventListener('push', (event) => {
   };
   
   event.waitUntil(
-    self.registration.showNotification('WhatsFlowPro', options)
+    self.registration.showNotification('WhatsAppFlowHub', options)
   );
 });
 ```
@@ -1747,7 +1747,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator();
 
-const WhatsFlowProApp = () => {
+const WhatsAppFlowHubApp = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   
@@ -1823,12 +1823,12 @@ const WhatsFlowProApp = () => {
 #### Flutter Implementation
 ```dart
 // Main Flutter app
-class WhatsFlowProApp extends StatefulWidget {
+class WhatsAppFlowHubApp extends StatefulWidget {
   @override
-  _WhatsFlowProAppState createState() => _WhatsFlowProAppState();
+  _WhatsAppFlowHubAppState createState() => _WhatsAppFlowHubAppState();
 }
 
-class _WhatsFlowProAppState extends State<WhatsFlowProApp> {
+class _WhatsAppFlowHubAppState extends State<WhatsAppFlowHubApp> {
   int _currentIndex = 0;
   
   final List<Widget> _screens = [
@@ -1841,7 +1841,7 @@ class _WhatsFlowProAppState extends State<WhatsFlowProApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'WhatsFlowPro',
+      title: 'WhatsAppFlowHub',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -1889,7 +1889,7 @@ class _WhatsFlowProAppState extends State<WhatsFlowProApp> {
 const { app, BrowserWindow, Menu, ipcMain, dialog } = require('electron');
 const path = require('path');
 
-class WhatsFlowProDesktop {
+class WhatsAppFlowHubDesktop {
   constructor() {
     this.mainWindow = null;
     this.initializeApp();
@@ -1992,7 +1992,7 @@ class WhatsFlowProDesktop {
   }
 }
 
-new WhatsFlowProDesktop();
+new WhatsAppFlowHubDesktop();
 ```
 
 ### 🌐 Browser Extension
@@ -2001,7 +2001,7 @@ new WhatsFlowProDesktop();
 ```json
 {
   "manifest_version": 3,
-  "name": "WhatsFlowPro Extension",
+  "name": "WhatsAppFlowHub Extension",
   "version": "1.0.0",
   "description": "Enhance WhatsApp Web with AI-powered task management",
   
@@ -2014,7 +2014,7 @@ new WhatsFlowProDesktop();
   
   "host_permissions": [
     "https://web.whatsapp.com/*",
-    "https://api.whatsflowpro.com/*"
+    "https://api.WhatsAppFlowHub.com/*"
   ],
   
   "background": {
@@ -2032,7 +2032,7 @@ new WhatsFlowProDesktop();
   
   "action": {
     "default_popup": "popup.html",
-    "default_title": "WhatsFlowPro"
+    "default_title": "WhatsAppFlowHub"
   },
   
   "icons": {
@@ -2117,7 +2117,7 @@ class WhatsAppEnhancer {
     
     // Add task indicator
     const indicator = document.createElement('div');
-    indicator.className = 'whatsflowpro-task-indicator';
+    indicator.className = 'WhatsAppFlowHub-task-indicator';
     indicator.textContent = '📝 Task detected';
     indicator.style.cssText = `
       font-size: 12px;
@@ -2135,7 +2135,7 @@ class WhatsAppEnhancer {
   showTaskSuggestion(element, analysis) {
     // Create floating action button for task creation
     const fab = document.createElement('button');
-    fab.className = 'whatsflowpro-fab';
+    fab.className = 'WhatsAppFlowHub-fab';
     fab.innerHTML = '+ Add Task';
     fab.style.cssText = `
       position: absolute;
@@ -2270,7 +2270,7 @@ class TestTaskExtractionIntegration:
 // Playwright E2E tests
 const { test, expect } = require('@playwright/test');
 
-test.describe('WhatsFlowPro Dashboard', () => {
+test.describe('WhatsAppFlowHub Dashboard', () => {
   test.beforeEach(async ({ page }) => {
     // Login before each test
     await page.goto('/login');
@@ -2411,11 +2411,11 @@ services:
     depends_on:
       - api-gateway
     networks:
-      - whatsflowpro-network
+      - WhatsAppFlowHub-network
   
   # API Gateway
   api-gateway:
-    image: whatsflowpro/api-gateway:${VERSION}
+    image: WhatsAppFlowHub/api-gateway:${VERSION}
     ports:
       - "3000:3000"
     environment:
@@ -2425,7 +2425,7 @@ services:
       - message-processor
       - task-extractor
     networks:
-      - whatsflowpro-network
+      - WhatsAppFlowHub-network
     deploy:
       replicas: 3
       update_config:
@@ -2436,24 +2436,24 @@ services:
   
   # Core Services
   message-processor:
-    image: whatsflowpro/message-processor:${VERSION}
+    image: WhatsAppFlowHub/message-processor:${VERSION}
     environment:
       - DATABASE_URL=${DATABASE_URL}
       - REDIS_URL=${REDIS_URL}
     networks:
-      - whatsflowpro-network
+      - WhatsAppFlowHub-network
     deploy:
       replicas: 2
   
   task-extractor:
-    image: whatsflowpro/task-extractor:${VERSION}
+    image: WhatsAppFlowHub/task-extractor:${VERSION}
     environment:
       - MODEL_PATH=/models
       - BATCH_SIZE=32
     volumes:
       - ai-models:/models
     networks:
-      - whatsflowpro-network
+      - WhatsAppFlowHub-network
     deploy:
       replicas: 2
   
@@ -2467,7 +2467,7 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
     networks:
-      - whatsflowpro-network
+      - WhatsAppFlowHub-network
   
   mongodb:
     image: mongo:6.0-jammy
@@ -2477,7 +2477,7 @@ services:
     volumes:
       - mongodb-data:/data/db
     networks:
-      - whatsflowpro-network
+      - WhatsAppFlowHub-network
   
   redis:
     image: redis:7-alpine
@@ -2485,7 +2485,7 @@ services:
     volumes:
       - redis-data:/data
     networks:
-      - whatsflowpro-network
+      - WhatsAppFlowHub-network
 
 volumes:
   postgres-data:
@@ -2494,7 +2494,7 @@ volumes:
   ai-models:
 
 networks:
-  whatsflowpro-network:
+  WhatsAppFlowHub-network:
     driver: overlay
     attachable: true
 ```
@@ -2507,15 +2507,15 @@ networks:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: whatsflowpro
+  name: WhatsAppFlowHub
 
 ---
 # k8s/configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: whatsflowpro-config
-  namespace: whatsflowpro
+  name: WhatsAppFlowHub-config
+  namespace: WhatsAppFlowHub
 data:
   NODE_ENV: "production"
   LOG_LEVEL: "info"
@@ -2526,11 +2526,11 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: whatsflowpro-secrets
-  namespace: whatsflowpro
+  name: WhatsAppFlowHub-secrets
+  namespace: WhatsAppFlowHub
 type: Opaque
 stringData:
-  database-url: "postgresql://user:pass@postgres:5432/whatsflowpro"
+  database-url: "postgresql://user:pass@postgres:5432/WhatsAppFlowHub"
   jwt-secret: "your-super-secret-jwt-key"
   whatsapp-token: "your-whatsapp-business-token"
 
@@ -2539,33 +2539,33 @@ stringData:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: whatsflowpro-api
-  namespace: whatsflowpro
+  name: WhatsAppFlowHub-api
+  namespace: WhatsAppFlowHub
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: whatsflowpro-api
+      app: WhatsAppFlowHub-api
   template:
     metadata:
       labels:
-        app: whatsflowpro-api
+        app: WhatsAppFlowHub-api
     spec:
       containers:
       - name: api
-        image: whatsflowpro/api:latest
+        image: WhatsAppFlowHub/api:latest
         ports:
         - containerPort: 3000
         env:
         - name: NODE_ENV
           valueFrom:
             configMapKeyRef:
-              name: whatsflowpro-config
+              name: WhatsAppFlowHub-config
               key: NODE_ENV
         - name: DATABASE_URL
           valueFrom:
             secretKeyRef:
-              name: whatsflowpro-secrets
+              name: WhatsAppFlowHub-secrets
               key: database-url
         resources:
           requests:
@@ -2592,11 +2592,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: whatsflowpro-api-service
-  namespace: whatsflowpro
+  name: WhatsAppFlowHub-api-service
+  namespace: WhatsAppFlowHub
 spec:
   selector:
-    app: whatsflowpro-api
+    app: WhatsAppFlowHub-api
   ports:
   - protocol: TCP
     port: 80
@@ -2608,8 +2608,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: whatsflowpro-ingress
-  namespace: whatsflowpro
+  name: WhatsAppFlowHub-ingress
+  namespace: WhatsAppFlowHub
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -2617,17 +2617,17 @@ metadata:
 spec:
   tls:
   - hosts:
-    - api.whatsflowpro.com
-    secretName: whatsflowpro-tls
+    - api.WhatsAppFlowHub.com
+    secretName: WhatsAppFlowHub-tls
   rules:
-  - host: api.whatsflowpro.com
+  - host: api.WhatsAppFlowHub.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: whatsflowpro-api-service
+            name: WhatsAppFlowHub-api-service
             port:
               number: 80
 ```
@@ -2637,8 +2637,8 @@ spec:
 #### AWS ECS with Terraform
 ```hcl
 # infrastructure/aws/main.tf
-resource "aws_ecs_cluster" "whatsflowpro" {
-  name = "whatsflowpro-cluster"
+resource "aws_ecs_cluster" "WhatsAppFlowHub" {
+  name = "WhatsAppFlowHub-cluster"
   
   setting {
     name  = "containerInsights"
@@ -2647,8 +2647,8 @@ resource "aws_ecs_cluster" "whatsflowpro" {
 }
 
 resource "aws_ecs_service" "api" {
-  name            = "whatsflowpro-api"
-  cluster         = aws_ecs_cluster.whatsflowpro.id
+  name            = "WhatsAppFlowHub-api"
+  cluster         = aws_ecs_cluster.WhatsAppFlowHub.id
   task_definition = aws_ecs_task_definition.api.arn
   desired_count   = 3
   
@@ -2659,7 +2659,7 @@ resource "aws_ecs_service" "api" {
   
   load_balancer {
     target_group_arn = aws_lb_target_group.api.arn
-    container_name   = "whatsflowpro-api"
+    container_name   = "WhatsAppFlowHub-api"
     container_port   = 3000
   }
   
@@ -2667,7 +2667,7 @@ resource "aws_ecs_service" "api" {
 }
 
 resource "aws_ecs_task_definition" "api" {
-  family                   = "whatsflowpro-api"
+  family                   = "WhatsAppFlowHub-api"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
   cpu                      = 1024
@@ -2677,8 +2677,8 @@ resource "aws_ecs_task_definition" "api" {
   
   container_definitions = jsonencode([
     {
-      name      = "whatsflowpro-api"
-      image     = "whatsflowpro/api:latest"
+      name      = "WhatsAppFlowHub-api"
+      image     = "WhatsAppFlowHub/api:latest"
       essential = true
       
       portMappings = [
@@ -2727,7 +2727,7 @@ resource "aws_ecs_task_definition" "api" {
 #### GitHub Actions Workflow
 ```yaml
 # .github/workflows/deploy.yml
-name: Deploy WhatsFlowPro
+name: Deploy WhatsAppFlowHub
 
 on:
   push:
@@ -2794,13 +2794,13 @@ jobs:
     
     - name: Build and push Docker images
       run: |
-        docker build -t whatsflowpro/api:${{ github.sha }} ./services/api
-        docker build -t whatsflowpro/message-processor:${{ github.sha }} ./services/message-processor
-        docker build -t whatsflowpro/task-extractor:${{ github.sha }} ./services/task-extractor
+        docker build -t WhatsAppFlowHub/api:${{ github.sha }} ./services/api
+        docker build -t WhatsAppFlowHub/message-processor:${{ github.sha }} ./services/message-processor
+        docker build -t WhatsAppFlowHub/task-extractor:${{ github.sha }} ./services/task-extractor
         
-        docker push whatsflowpro/api:${{ github.sha }}
-        docker push whatsflowpro/message-processor:${{ github.sha }}
-        docker push whatsflowpro/task-extractor:${{ github.sha }}
+        docker push WhatsAppFlowHub/api:${{ github.sha }}
+        docker push WhatsAppFlowHub/message-processor:${{ github.sha }}
+        docker push WhatsAppFlowHub/task-extractor:${{ github.sha }}
 
   deploy-staging:
     needs: build
@@ -2834,7 +2834,7 @@ jobs:
       uses: 8398a7/action-slack@v3
       with:
         status: ${{ job.status }}
-        text: "WhatsFlowPro deployment completed successfully!"
+        text: "WhatsAppFlowHub deployment completed successfully!"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 ```
@@ -2848,8 +2848,8 @@ We welcome contributions from the community! Please read our contributing guidel
 #### Development Setup
 ```bash
 # Fork the repository
-git clone https://github.com/your-username/whatsflowpro.git
-cd whatsflowpro
+git clone https://github.com/your-username/WhatsAppFlowHub.git
+cd WhatsAppFlowHub
 
 # Install dependencies
 npm install
@@ -2970,14 +2970,14 @@ We are committed to providing a welcoming and inclusive experience for all contr
 
 ### 🛟 Getting Help
 
-- **Documentation**: [docs.whatsflowpro.com](https://docs.whatsflowpro.com)
-- **Community Forum**: [community.whatsflowpro.com](https://community.whatsflowpro.com)
-- **Email Support**: support@whatsflowpro.com
-- **Enterprise Support**: enterprise@whatsflowpro.com
+- **Documentation**: [docs.WhatsAppFlowHub.com](https://docs.WhatsAppFlowHub.com)
+- **Community Forum**: [community.WhatsAppFlowHub.com](https://community.WhatsAppFlowHub.com)
+- **Email Support**: support@WhatsAppFlowHub.com
+- **Enterprise Support**: enterprise@WhatsAppFlowHub.com
 
 ### 🐛 Bug Reports
 
-Please report bugs using our [GitHub Issues](https://github.com/your-org/whatsflowpro/issues) with:
+Please report bugs using our [GitHub Issues](https://github.com/vishalm/WhatsAppFlowHub/issues) with:
 - Detailed description of the issue
 - Steps to reproduce
 - Expected vs actual behavior
@@ -2993,7 +2993,7 @@ Submit feature requests through:
 
 ### 🔒 Security Issues
 
-For security-related issues, please email: security@whatsflowpro.com
+For security-related issues, please email: security@WhatsAppFlowHub.com
 
 ## 📄 License
 
@@ -3007,10 +3007,10 @@ This project uses several open-source libraries and frameworks. See [THIRD-PARTY
 
 <div align="center">
 
-**WhatsFlowPro** - Transforming Conversations into Productivity
+**WhatsAppFlowHub** - Transforming Conversations into Productivity
 
-[Website](https://whatsflowpro.com) • [Documentation](https://docs.whatsflowpro.com) • [Community](https://community.whatsflowpro.com) • [Twitter](https://twitter.com/whatsflowpro)
+[Website](https://WhatsAppFlowHub.com) • [Documentation](https://docs.WhatsAppFlowHub.com) • [Community](https://community.WhatsAppFlowHub.com) • [Twitter](https://twitter.com/WhatsAppFlowHub)
 
-Made with ❤️ by the WhatsFlowPro Team
+Made with ❤️ by the WhatsAppFlowHub Team
 
 </div>
