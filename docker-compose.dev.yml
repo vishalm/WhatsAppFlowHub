@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  # Core Services
+  message-processor:
+    build: ./services/message-processor
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./services/message-processor:/app
+    depends_on:
+      - postgres
+      - redis
+
+  task-extractor:
+    build: ./services/task-extractor
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./services/task-extractor:/app
+      - ./ai-pipeline:/ai-pipeline
+
+  integration-hub:
+    build: ./services/integration-hub
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./services/integration-hub:/app
+
+  automation-engine:
+    build: ./services/automation-engine
+    ports:
+      - "3004:3000"
+    volumes:
+      - ./services/automation-engine:/app
+
+  analytics:
+    build: ./services/analytics
+    ports:
+      - "3005:3000"
+    volumes:
+      - ./services/analytics:/app
+
+  # Databases
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: WhatsAppFlowHub
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  mongodb:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  # Message Queue
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  postgres_data:
+  mongodb_data:

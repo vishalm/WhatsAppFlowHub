@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: message-processor
+  labels:
+    app: message-processor
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: message-processor
+  template:
+    metadata:
+      labels:
+        app: message-processor
+    spec:
+      containers:
+      - name: message-processor
+        image: WhatsAppFlowHub/message-processor:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: message-processor-service
+spec:
+  selector:
+    app: message-processor
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: ClusterIP

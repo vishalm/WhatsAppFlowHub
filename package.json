@@ -1,0 +1,21 @@
+{
+  "name": "WhatsAppFlowHub",
+  "version": "1.0.0",
+  "description": "WhatsApp AI Task Management System",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up",
+    "dev": "docker-compose -f docker-compose.dev.yml up",
+    "test": "npm run test:services && npm run test:frontend",
+    "test:services": "cd services && npm run test:all",
+    "test:frontend": "cd frontend && npm run test:all",
+    "build": "npm run build:services && npm run build:frontend",
+    "deploy": "bash scripts/deployment/deploy.sh"
+  },
+  "workspaces": [
+    "services/*",
+    "frontend/*",
+    "mobile/*",
+    "desktop/*"
+  ]
+}

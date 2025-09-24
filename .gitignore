@@ -1,0 +1,519 @@
+# ================================
+# WhatsFlowPro Comprehensive .gitignore
+# ================================
+
+# ================================
+# ENVIRONMENT & SECRETS
+# ================================
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
+*.env
+
+# Secret keys and certificates
+secrets/
+certificates/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+config/secrets/
+**/*secret*
+**/*private*
+
+# ================================
+# NODE.JS & NPM
+# ================================
+node_modules/
+*/node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.yarn-integrity
+.yarn/
+.pnp.*
+
+# Package manager lock files (choose one strategy)
+# Option 1: Keep lock files
+# package-lock.json
+# yarn.lock
+
+# Option 2: Ignore lock files (not recommended)
+# package-lock.json
+# yarn.lock
+
+# Dependency directories
+jspm_packages/
+
+# ================================
+# PYTHON & AI/ML
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env/
+ai-pipeline/venv/
+*/venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+ai-pipeline/notebooks/.ipynb_checkpoints/
+
+# AI/ML specific
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.pb
+checkpoints/
+models/saved/
+wandb/
+.mlflow/
+experiments/
+tensorboard_logs/
+*.tfevents.*
+
+# Data files
+*.csv
+*.xlsx
+*.json
+*.parquet
+data/raw/
+data/processed/
+datasets/raw/
+datasets/processed/
+
+# ================================
+# FRONTEND & BUILD OUTPUTS
+# ================================
+build/
+dist/
+*/build/
+*/dist/
+**/build/
+**/dist/
+
+# React
+.cache/
+.parcel-cache/
+
+# Next.js
+.next/
+out/
+
+# Nuxt.js
+.nuxt/
+.output/
+
+# Vite
+dist-ssr/
+*.tsbuildinfo
+
+# Webpack
+.webpack/
+
+# SvelteKit
+.svelte-kit/
+
+# ================================
+# MOBILE DEVELOPMENT
+# ================================
+
+# React Native
+# iOS
+mobile/react-native/ios/build/
+mobile/react-native/ios/Pods/
+mobile/react-native/ios/*.xcworkspace
+mobile/react-native/ios/*.xcuserstate
+mobile/react-native/ios/DerivedData/
+
+# Android
+mobile/react-native/android/app/build/
+mobile/react-native/android/build/
+mobile/react-native/android/.gradle/
+mobile/react-native/android/local.properties
+mobile/react-native/android/app/release/
+*.apk
+*.aab
+
+# React Native specific
+mobile/react-native/metro.config.js.bak
+
+# Flutter
+mobile/flutter/.dart_tool/
+mobile/flutter/.flutter-plugins
+mobile/flutter/.flutter-plugins-dependencies
+mobile/flutter/.packages
+mobile/flutter/.pub-cache/
+mobile/flutter/.pub/
+mobile/flutter/build/
+mobile/flutter/ios/Podfile.lock
+mobile/flutter/ios/.symlinks/
+mobile/flutter/ios/Flutter/Flutter.framework
+mobile/flutter/ios/Flutter/Flutter.podspec
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# ================================
+# DESKTOP & BROWSER EXTENSION
+# ================================
+
+# Electron
+desktop/electron/out/
+desktop/electron/build/
+desktop/electron/dist/
+
+# Browser Extension
+browser-extension/build/
+browser-extension/dist/
+browser-extension/*.zip
+browser-extension/*.crx
+
+# ================================
+# DATABASES
+# ================================
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.sql.gz
+
+# Database dumps
+dump.rdb
+dump.sql
+backup.sql
+*.dump
+
+# Database data directories
+data/postgres/
+data/mongodb/
+data/redis/
+
+# ================================
+# DOCKER & CONTAINERS
+# ================================
+.dockerignore
+docker-compose.override.yml
+.docker/
+containers/
+
+# ================================
+# LOGS & MONITORING
+# ================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime logs
+combined.log
+error.log
+access.log
+
+# Monitoring & metrics
+monitoring/data/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output/
+
+# ================================
+# TESTING
+# ================================
+# Jest
+coverage/
+.coverage
+htmlcov/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Testing artifacts
+test-results/
+screenshots/
+videos/
+
+# E2E testing
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# ================================
+# IDE & EDITORS
+# ================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# WebStorm
+.webstorm/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+
+# ================================
+# OPERATING SYSTEMS
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.temp
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# CLOUD & DEPLOYMENT
+# ================================
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Ansible
+*.retry
+
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
+service-account-key.json
+
+# Azure
+.azure/
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# ================================
+# TEMPORARY & CACHE FILES
+# ================================
+
+# General temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Cache directories
+.cache/
+cache/
+.sass-cache/
+.eslintcache
+.stylelintcache
+
+# Parcel cache
+.cache/
+.parcel-cache/
+
+# ================================
+# MISC
+# ================================
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Backup files
+*.bak
+*.backup
+*.old
+*~
+
+# Lock files
+*.lock
+.lock
+
+# Generated documentation
+docs/generated/
+docs/build/
+
+# Storybook
+storybook-static/
+
+# Service worker
+sw.js
+workbox-*.js
+
+# PWA
+manifest.json.map
+
+# ================================
+# PROJECT SPECIFIC
+# ================================
+
+# WhatsApp Business API tokens (additional safety)
+*whatsapp*token*
+*business*api*key*
+
+# Integration credentials
+*oauth*
+*client*secret*
+*api*key*
+
+# Custom uploads
+uploads/
+attachments/
+media/
+
+# Generated files
+generated/
+auto-generated/
+
+# Benchmark results
+benchmark/
+performance/
+
+# ================================
+# KEEP IMPORTANT FILES
+# (Use ! to negate ignore patterns)
+# ================================
+
+# Keep important config templates
+!.env.example
+!.env.template
+!config/template/
+!docker-compose.template.yml
+
+# Keep essential docs
+!README.md
+!LICENSE
+!CHANGELOG.md
+!CONTRIBUTING.md
+
+# Keep CI/CD configs
+!.github/
+!.gitlab-ci.yml
+!Dockerfile
+!docker-compose.yml
+!.dockerignore.example
+
+# Keep essential config files
+!package.json
+!tsconfig.json
+!babel.config.js
+!webpack.config.js
+!tailwind.config.js
